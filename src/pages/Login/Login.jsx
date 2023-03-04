@@ -25,6 +25,7 @@ export const Login = () => {
     setPassword('');
     const res = await signIn(email, password);
     if (res === true) {
+      console.log(authorizied);
       setAuthorizied(res);
     }
     if (res.error) seterror(res.error);

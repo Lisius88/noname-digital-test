@@ -99,6 +99,7 @@ export const Products = () => {
 
   return (
     <>
+      {error && <p>{error}</p>}
       {loading && <Loader />}
       <FlexContainer>
         <FlexContainerSecond>
