@@ -15,7 +15,7 @@ import { Loader } from 'components/Loader/Loader';
 
 export const ProductDetails = () => {
   const [
-    { id, title, description, price, rating, brand, category, images },
+    { id, title, description, price, rating, brand, category, thumbnail },
     setProduct,
   ] = useState({});
   const { productId } = useParams();
@@ -32,7 +32,7 @@ export const ProductDetails = () => {
     if (user) {
       dispatch({
         type: 'ADD_TO_BASKET',
-        payload: { id, title, price, images },
+        payload: { id, title, price, thumbnail },
       });
       toast.success('Product added to basket');
     }
@@ -57,7 +57,7 @@ export const ProductDetails = () => {
       {title && (
         <div>
           <FlexContainer>
-            <img src={images[0]} alt={title} />
+            <img src={thumbnail} alt={title} />
             <DetailsContainer>
               <p>
                 Model: <span>{title}</span>
