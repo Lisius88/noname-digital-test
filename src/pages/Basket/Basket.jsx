@@ -37,7 +37,7 @@ export const Basket = () => {
             {basketItems.map(item => (
               <Item key={item.id}>
                 <FlexContainer>
-                  <Img src={item.images[0]} alt={item.title} />
+                  <Img src={item.thumbnail} alt={item.title} />
                   <div
                     style={{
                       display: 'flex',
