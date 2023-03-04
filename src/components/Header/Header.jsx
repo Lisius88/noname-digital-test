@@ -62,7 +62,7 @@ const NavLinkStyled = styled(NavLink)`
 export const NavLinkStyledLogo = styled(NavLink)`
   display: none;
   @media (min-width: 768px) {
-    padding: 20px;
+    padding: 18px;
     display: block;
     font-size: 25px;
     color: #0052b1;

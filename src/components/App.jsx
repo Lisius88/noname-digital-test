@@ -7,7 +7,6 @@ import { Login } from 'pages/Login/Login';
 import { Register } from 'pages/Register/Register';
 import { Profile } from 'pages/Profile/Profile';
 import { ProductDetails } from './ProductDetails/ProductDetails';
-import { useRef } from 'react';
 import { Basket } from 'pages/Basket/Basket';
 import { Container } from './Container.styled';
 import { Toaster } from 'react-hot-toast';
