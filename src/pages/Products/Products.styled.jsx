@@ -20,13 +20,13 @@ export const FlexContainerSecond = styled.div`
 
 export const Select = styled.select`
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   font-family: sans-serif;
   font-weight: 700;
   color: #444;
   line-height: 1.3;
   padding: 0.6em 1.4em 0.5em 0.8em;
-  width: 150px;
+  width: 130px;
   height: 40px;
   margin: 0;
   border: 1px solid #aaa;
@@ -62,7 +62,7 @@ export const Select = styled.select`
 
 export const Button = styled.button`
   margin-left: 5px;
-  width: 100px;
+  width: 170px;
   height: 40px;
   margin-top: 10px;
   display: block;

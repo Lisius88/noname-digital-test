@@ -24,7 +24,10 @@ export const Products = () => {
   const handleButtonClick = () => {
     const selectedValue = selectRef.current.value;
     console.log(selectedValue);
-
+    if (selectedValue === 'default') {
+      setSortProducts(products);
+      setproductsByCategory(productsByCategory);
+    }
     if (selectedValue === 'higher') {
       const high = [...products].sort(
         (higher, lower) => lower.price - higher.price
@@ -114,17 +117,18 @@ export const Products = () => {
               ))}
           </Select>
           <Button type="button" onClick={handleButtonClickSecond}>
-            Select
+            Select category
           </Button>
         </FlexContainerSecond>
         <FlexContainerSecond>
           <Select ref={selectRef}>
+            <option value="default">default</option>
             <option value="higher">from higher to lower price</option>
             <option value="lower">from lower to higher price</option>
             <option value="popular">by popularity</option>
           </Select>
           <Button type="button" onClick={handleButtonClick}>
-            Select
+            Select filter
           </Button>
         </FlexContainerSecond>
       </FlexContainer>
