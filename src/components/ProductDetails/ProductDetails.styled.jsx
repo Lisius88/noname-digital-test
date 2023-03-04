@@ -18,7 +18,7 @@ export const Button = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', Тahoma, sans-serif;
-  background: #fca94d;
+  background: #91ad70;
   transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
   z-index: 1;

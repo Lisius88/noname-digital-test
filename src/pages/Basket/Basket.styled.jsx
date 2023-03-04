@@ -68,3 +68,9 @@ export const Total = styled.span`
 export const Price = styled.span`
   font-weight: 500;
 `;
+
+export const Info = styled.p`
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+`;

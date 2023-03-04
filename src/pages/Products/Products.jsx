@@ -59,9 +59,10 @@ export const Products = () => {
 
   const handleButtonClickSecond = () => {
     const selectedValue = selectRefSecond.current.value;
-    console.log(selectedValue);
-
-    setCat(selectedValue);
+    if (selectedValue === 'all products') {
+      setCat(null);
+      setProducts(products);
+    } else setCat(selectedValue);
   };
 
   useEffect(() => {
@@ -79,7 +80,8 @@ export const Products = () => {
     axios
       .get('https://dummyjson.com/products/categories')
       .then(res => {
-        setCategories(res.data);
+        console.log(categoties);
+        setCategories(['all products', ...res.data]);
       })
       .catch(error => setError(error))
       .finally(() => {

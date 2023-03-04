@@ -13,7 +13,7 @@ export const ProductsList = ({ products }) => {
               <Img src={thumbnail} alt={title} />
               <Descr>
                 <h3>{title}</h3>
-                <p>{price}$</p>
+                <p style={{ fontWeight: '600' }}>{price}$</p>
                 <p>{brand}</p>
               </Descr>
             </Link>

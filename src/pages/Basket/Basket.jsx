@@ -6,19 +6,20 @@ import {
   Img,
   Total,
   Price,
+  Info,
 } from './Basket.styled';
 
 export const Basket = () => {
   const dispatch = useDispatch();
-  const basketItems = useSelector(state => state.cartItems);
+  const basketItems = useSelector(state => state.basketItems);
   console.log(basketItems);
 
-  const removeFromCart = itemId => {
-    dispatch({ type: 'REMOVE_FROM_CART', payload: itemId });
+  const removeFromBasket = itemId => {
+    dispatch({ type: 'REMOVE_FROM_BASKET', payload: itemId });
   };
 
-  const clearCart = () => {
-    dispatch({ type: 'CLEAR_CART' });
+  const clearBasket = () => {
+    dispatch({ type: 'CLEAR_BASKET' });
   };
 
   const price = basketItems.map(item => item.price);
@@ -29,7 +30,7 @@ export const Basket = () => {
   return (
     <div>
       {basketItems.length === 0 ? (
-        <p>Your cart is empty</p>
+        <Info>Your basket is empty</Info>
       ) : (
         <>
           <ul>
@@ -45,7 +46,7 @@ export const Basket = () => {
                   >
                     <p style={{ marginRight: '20px' }}>{item.title}</p>
                     <Price style={{ marginRight: '15px' }}>{item.price}$</Price>
-                    <Button onClick={() => removeFromCart(item.id)}>x</Button>
+                    <Button onClick={() => removeFromBasket(item.id)}>x</Button>
                   </div>
                 </FlexContainer>
               </Item>
@@ -53,7 +54,7 @@ export const Basket = () => {
           </ul>
           <Total>Total: {total}$</Total>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Button onClick={clearCart}>Clear</Button>
+            <Button onClick={clearBasket}>Clear</Button>
             <Button>Pay</Button>
           </div>
         </>

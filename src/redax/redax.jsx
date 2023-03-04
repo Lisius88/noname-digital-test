@@ -3,25 +3,27 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 const initialState = {
-  cartItems: [],
+  basketItems: [],
 };
 
-const cartReducer = (state = initialState, action) => {
+const basketReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_TO_CART':
+    case 'ADD_TO_BASKET':
       return {
         ...state,
-        cartItems: [...state.cartItems, action.payload],
+        basketItems: [...state.basketItems, action.payload],
       };
-    case 'REMOVE_FROM_CART':
+    case 'REMOVE_FROM_BASKET':
       return {
         ...state,
-        cartItems: state.cartItems.filter(item => item.id !== action.payload),
+        basketItems: state.basketItems.filter(
+          item => item.id !== action.payload
+        ),
       };
-    case 'CLEAR_CART':
+    case 'CLEAR_BASKET':
       return {
         ...state,
-        cartItems: [],
+        basketItems: [],
       };
     default:
       return state;
@@ -33,7 +35,7 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, cartReducer);
+const persistedReducer = persistReducer(persistConfig, basketReducer);
 const store = createStore(persistedReducer);
 const persistor = persistStore(store);
 

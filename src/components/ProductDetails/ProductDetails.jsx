@@ -31,9 +31,10 @@ export const ProductDetails = () => {
     }
     if (user) {
       dispatch({
-        type: 'ADD_TO_CART',
+        type: 'ADD_TO_BASKET',
         payload: { id, title, price, images },
       });
+      toast.success('Product added to basket');
     }
   };
 
