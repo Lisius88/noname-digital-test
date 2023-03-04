@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/noname-digital-test/static/css/main.e19b9aaa.css",
+    "main.js": "/noname-digital-test/static/js/main.3c20b804.js",
+    "index.html": "/noname-digital-test/index.html",
+    "main.e19b9aaa.css.map": "/noname-digital-test/static/css/main.e19b9aaa.css.map",
+    "main.3c20b804.js.map": "/noname-digital-test/static/js/main.3c20b804.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e19b9aaa.css",
+    "static/js/main.3c20b804.js"
+  ]
+}
