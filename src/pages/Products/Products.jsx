@@ -83,7 +83,6 @@ export const Products = () => {
     axios
       .get('https://dummyjson.com/products/categories')
       .then(res => {
-        console.log(categoties);
         setCategories(['all products', ...res.data]);
       })
       .catch(error => setError(error))
