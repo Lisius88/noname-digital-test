@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
 import {
   FlexContainer,
   Item,
@@ -10,7 +9,6 @@ import {
 } from './Basket.styled';
 
 export const Basket = () => {
-  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   const basketItems = useSelector(state => state.cartItems);
   console.log(basketItems);
